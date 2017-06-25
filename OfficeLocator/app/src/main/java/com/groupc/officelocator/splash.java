@@ -11,9 +11,9 @@ import android.widget.Button;
 public class splash extends AppCompatActivity {
 
 
-    public Button pizzamenubut;
-    public Button drinkmenubut;
-    public Button ordermenubut;
+    public Button splashb1;
+    public Button splashb2;
+    public Button splashb3;
 
 
 
@@ -29,9 +29,9 @@ public class splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        pizzamenubut = (Button)findViewById(R.id.backbutton);
+        splashb1 = (Button)findViewById(R.id.splashbutton1);
 
-        pizzamenubut.setOnClickListener(new View.OnClickListener(){
+        splashb1.setOnClickListener(new View.OnClickListener(){
 
                                             public void onClick(View v){
                                                 Intent theintent = new Intent(splash.this, campus.class);
@@ -46,9 +46,9 @@ public class splash extends AppCompatActivity {
 
 
 
-        drinkmenubut = (Button)findViewById(R.id.addadrink);
+        splashb2 = (Button)findViewById(R.id.splashbutton2);
 
-        drinkmenubut.setOnClickListener(new View.OnClickListener(){
+        splashb2.setOnClickListener(new View.OnClickListener(){
 
                                             public void onClick(View v){
                                                 Intent theintent = new Intent(splash.this, floorplan.class);
@@ -61,9 +61,9 @@ public class splash extends AppCompatActivity {
         );
 
 
-        ordermenubut = (Button)findViewById(R.id.revieworder);
+        splashb3 = (Button)findViewById(R.id.splashbutton3);
 
-        ordermenubut.setOnClickListener(new View.OnClickListener(){
+        splashb3.setOnClickListener(new View.OnClickListener(){
 
                                             public void onClick(View v){
                                                 Intent theintent = new Intent(splash.this, directions.class);
