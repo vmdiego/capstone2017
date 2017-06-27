@@ -14,7 +14,7 @@ public class splash extends AppCompatActivity {
     public Button pizzamenubut;
     public Button drinkmenubut;
     public Button ordermenubut;
-
+    public Button aboutPage;
 
 
 
@@ -72,6 +72,17 @@ public class splash extends AppCompatActivity {
                                             }
 
                                         }
+
+        );
+
+        aboutPage = (Button)findViewById(R.id.AboutButton);
+        aboutPage.setOnClickListener(new View.OnClickListener(){
+                                         public void onClick(View v) {
+                                             Intent theintent = new Intent(splash.this, about.class);
+                                             startActivity(theintent);
+                                         }
+                                     }
+
 
         );
 

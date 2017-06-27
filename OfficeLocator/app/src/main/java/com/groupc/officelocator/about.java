@@ -1,19 +1,23 @@
 package com.groupc.officelocator;
 
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.io.IOException;
+
 /**
  * Created by zachary on 6/26/17.
  */
 
 public class about extends AppCompatActivity {
     public TextView textView4;
-    String vNum;
+    String vNum = null;
 
     /*
     * retrieveVNum
@@ -24,7 +28,7 @@ public class about extends AppCompatActivity {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), 0);
             vNum = "Version: " + info.versionName;
-        }catch(Exception e){
+        }catch(PackageManager.NameNotFoundException e){
             vNum = "ERROR: Version Number Not Found";
         }
         return vNum;
