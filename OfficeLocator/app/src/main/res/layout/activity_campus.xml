@@ -63,16 +63,39 @@
 
     <Button
         android:id="@+id/df1"
-        android:layout_width="70dip"
-        android:layout_height="24dip"
-        android:layout_alignBottom="@+id/mh1"
-        android:layout_marginBottom="46dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_toRightOf="@+id/textView4"
+        android:layout_width="80dip"
+        android:layout_height="30dip"
         android:background="@android:color/transparent"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_below="@+id/tw1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:id="@+id/tw1"
+        android:layout_width="110dip"
+        android:layout_height="75dip"
+        android:layout_marginLeft="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/mh1"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:id="@+id/nr1"
+        android:layout_width="90dip"
+        android:layout_height="80dip"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        android:layout_alignBottom="@+id/ms1"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
 
 
 </RelativeLayout>
