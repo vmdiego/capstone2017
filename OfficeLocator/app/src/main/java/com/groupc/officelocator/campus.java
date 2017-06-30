@@ -12,100 +12,36 @@ import android.widget.TextView;
 public class campus extends AppCompatActivity {
 
     //6/29/2017 Nhi - Adding buttons for the individual buildings
-    public int numberBuildings = 3; //16;
+    public int numberBuildings = 5; //16;
     public Button miaHamm;
     public Button mikeSchmidt;
     public Button danFouts;
     public Button tigerWoods;
     public Button nolanRyan1;
 
-    /*Button[] arrayButtons = {miaHamm, mikeSchmidt, danFouts};
-    int[] buttonNames = {R.id.mh1, R.id.ms1, R.id.df1};
-    String[] arrayFloorNames = {"Mia Hamm Floor Plan", "Mike Schmidt Floor Plan", "Dan Fouts Floor Plan"};
-    String[] arrayFloorPlanImages = {"miahammfloorplan", "mikeschmidtfloorplan", "danfoutsfloorplan"};
-    public int i;
-    */
+    Button[] arrayButtons = {miaHamm, mikeSchmidt, danFouts, tigerWoods, nolanRyan1};
+    int[] buttonNames = {R.id.mh1, R.id.ms1, R.id.df1, R.id.tw1, R.id.nr1};
+    String[] arrayFloorNames = {"Mia Hamm Floor Plan", "Mike Schmidt Floor Plan", "Dan Fouts Floor Plan", "Tiger Woods Floor Plan", "Nolan Ryan Floor Plan"};
+    //Need to add more generic floor plans
+    String[] arrayFloorPlanImages = {"miahammfloorplan", "mikeschmidtfloorplan", "danfoutsfloorplan", "miahammfloorplan", "danfoutsfloorplan"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus);
 
-        /*for (i = 0; i < numberBuildings; ++i) {
+        for (int i = 0; i < numberBuildings; i++) {
+            final int j = i;
             arrayButtons[i] = (Button)findViewById(buttonNames[i]);
-            arrayButtons[i].setOnClickListener(new View.OnClickListener(){
-                public void onClick(View v){
+            arrayButtons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                    goToFloorPlan.putExtra("fpname", arrayFloorNames[i]);
-                    //goToFloorPlan.putExtra("imageName", arrayFloorPlanImages[i]);
+                    goToFloorPlan.putExtra("fpname", arrayFloorNames[j]);
+                    goToFloorPlan.putExtra("imageName", arrayFloorPlanImages[j]);
                     startActivity(goToFloorPlan);
                 }
             });
         }
-        */
-
-        //Mia Hamm Building
-        miaHamm = (Button)findViewById(R.id.mh1);
-        miaHamm.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                goToFloorPlan.putExtra("fpname", "Mia Hamm Floor Plan");
-                goToFloorPlan.putExtra("imageName", "miahammfloorplan");
-                startActivity(goToFloorPlan);
-            }
-        });
-
-        //Mike Schmidt Building
-        mikeSchmidt = (Button)findViewById(R.id.ms1);
-        mikeSchmidt.setOnClickListener(new View.OnClickListener(){
-                                       public void onClick(View v){
-                                           Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                                           goToFloorPlan.putExtra("fpname", "Mike Schmidt Floor Plan");
-                                           goToFloorPlan.putExtra("imageName", "mikeschmidtfloorplan");
-                                           startActivity(goToFloorPlan);
-                                       }
-                                   }
-        );
-
-        //Dan Fouts Building
-        danFouts = (Button)findViewById(R.id.df1);
-        danFouts.setOnClickListener(new View.OnClickListener(){
-                                           public void onClick(View v){
-                                               Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                                               goToFloorPlan.putExtra("fpname", "Dan Fouts Floor Plan");
-                                               goToFloorPlan.putExtra("imageName", "danfoutsfloorplan");
-                                               startActivity(goToFloorPlan);
-                                           }
-                                       }
-        );
-
-        //Tiger Woods Building
-        tigerWoods = (Button)findViewById(R.id.tw1);
-        tigerWoods.setOnClickListener(new View.OnClickListener(){
-                                        public void onClick(View v){
-                                            Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                                            goToFloorPlan.putExtra("fpname", "Tiger Woods Floor Plan");
-                                            goToFloorPlan.putExtra("imageName", "miahammfloorplan");
-                                            startActivity(goToFloorPlan);
-                                        }
-                                    }
-        );
-
-        //Nolan Ryan Building
-        nolanRyan1 = (Button)findViewById(R.id.nr1);
-        nolanRyan1.setOnClickListener(new View.OnClickListener(){
-                                          public void onClick(View v){
-                                              Intent goToFloorPlan = new Intent(campus.this, floorplan.class);
-                                              goToFloorPlan.putExtra("fpname", "Nolan Ryan Floor Plan");
-                                              goToFloorPlan.putExtra("imageName", "danfoutsfloorplan");
-                                              startActivity(goToFloorPlan);
-                                          }
-                                      }
-        );
     }
-
-
-
-
-
 }
